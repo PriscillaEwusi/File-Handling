@@ -182,3 +182,37 @@ def load_sample_data():
     if save_contacts(contacts):
         print(f"Added {added} sample contact(s).")
 
+#STEP 6: Main menu loop - repeats until the user chooses Exit
+def main():
+    """Run the contact book menu."""
+    print("Welcome to the DTEN Contact Book!")
+    while True:
+        print("\n===== CONTACT BOOK =====")
+        print("1. Add contact")
+        print("2. View contacts")
+        print("3. Update contact")
+        print("4. Delete contact")
+        print("5. Load 5 sample contacts (for testing)")
+        print("6. Exit")
+ 
+        choice = get_choice("Choose an option (1-6): ", 1, 6)
+ 
+        if choice == 1:
+            add_contact()
+        elif choice == 2:
+            view_contacts()
+        elif choice == 3:
+            update_contact()
+        elif choice == 4:
+            delete_contact()
+        elif choice == 5:
+            load_sample_data()
+        elif choice == 6:
+            print("Goodbye!")
+            break
+ 
+ 
+# Run main() only when this file is run directly
+if __name__ == "__main__":
+    main()
+
