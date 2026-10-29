@@ -182,5 +182,3 @@ def load_sample_data():
     if save_contacts(contacts):
         print(f"Added {added} sample contact(s).")
 
-
-
